@@ -1,0 +1,28 @@
+/*
+  Fundacion Kinal
+  Centero Educativo Tecnico Labotal Kinal
+  Quinto Perito
+  Quinto Electronica
+  Codigo Tecnico : EB5AM / EB5AV
+  Curso: Taller De electronica digital y repatacion de computadoras I
+  Proyecto: Escritura en un pin digital (Encender o apagar un pin digital)
+  Dev: Prof. Alejandro Lopez Navas
+  Fecha: 12 de abril
+*/
+
+//Directivas de preprocesador
+#define LedNaraja     4      //pin4 conectado a un led
+#define tiempo_espera 500    //tiempo entre estados del led
+
+void setup()
+{
+  pinMode(LedNaraja, OUTPUT); //pin4 como salida.
+  digitalWrite(LedNaraja, LOW); //LEDconectado al pin13 inicia apagado
+}
+void loop()
+{
+  digitalWrite(LedNaraja, HIGH); //Enciende el led conectado al pin4
+  delay(tiempo_espera);  //espera de 500 mikisegundos.
+  digitalWrite(LedNaraja, LOW); //Apago el led conectado al pin4
+  delay(tiempo_espera);  //espera de 500 milisegundos
+}
